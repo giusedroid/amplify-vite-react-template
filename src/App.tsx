@@ -28,6 +28,7 @@ function App() {
 
   return (
     <Authenticator>
+      { ({signOut, user}) => (
     <main>
       <h1>My todos</h1>
       <button onClick={createTodo}>+ new</button>
@@ -45,7 +46,8 @@ function App() {
           Review next step of this tutorial.
         </a>
       </div>
-    </main>
+      <button onClick={signOut}>Sign out</button>
+    </main>)}
     </Authenticator>
   );
 }
